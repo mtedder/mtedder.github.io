@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<jnlp spec="1.0+" codebase="/PosSwing" href="posswing.jnlp">
+	<information>
+		<title>Jnlp Testing</title>
+		<vendor>Maurice Tedder</vendor>
+		<homepage href="/PosSwing" />
+		<description>Testing Testing</description>
+	</information>
+	<security>
+		<all-permissions/>
+	</security>
+	<resources>
+		<j2se version="1.6+" />
+		<jar href="posswing.jar" />
+	</resources>
+	<application-desc main-class="ApplicationTest" />
+</jnlp>
