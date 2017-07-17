@@ -1,0 +1,2177 @@
+/*---------------------------------------------------------------------------------------------*/
+/* CSS de l'atelier                                                                            */
+/*                                                                                             */
+/* Date de création:        2011-12-12                                                         */
+/* Date de modification:    2012-06-20                                                         */
+/*---------------------------------------------------------------------------------------------*/
+
+body {
+    background: #1d1d1d;
+}
+
+#header {
+	background: url(../img/workshop.png) 0px 0px;
+	height: 61px;
+	width: 100%;
+}
+
+#logo {
+	background: url(../img/workshop.png) 0px -62px;
+	cursor: pointer;
+	float: left;
+	height: 61px;
+	position: relative;
+	margin-left: 14px;
+	width: 190px;
+}
+
+#logo span {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+#header .flags {
+    float: right;
+    margin-right: 10px;
+    margin-top: 4px;
+    width: 22px;
+}
+
+#header .flag {
+    cursor: pointer;
+    height: 17px;
+    position: relative;
+    width: 22px;
+}
+
+#header .flag span {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+#header .en {
+    background: url(../img/workshop.png) -971px -196px;
+}
+
+#header .fr {
+    background: url(../img/workshop.png) -994px -196px;
+    margin-top: 2px;
+}
+
+#header .ru {
+    background: url(../img/workshop.png) -1017px -196px;
+    margin-top: 2px;
+}
+
+#header a {
+    display:  block;
+    text-decoration: none;
+}
+
+#header .button {
+    cursor: pointer;
+    float: right;
+    height: 33px;
+    margin-right: 10px;
+    margin-top: 14px;
+}
+
+#header .button .left {
+    float: left;
+    height: 33px;
+}
+
+#header .button .middle {
+    background: url(../img/workshop.png) -773px -262px;
+    color: #ffffff;
+    float: left;
+    font-size: 11px;
+    height: 33px;
+    line-height: 32px;
+    text-shadow: #151515 0px -1px;
+}
+
+#header .button .right {
+    background: url(../img/workshop.png) -961px -262px;
+    float: left;
+    height: 33px;
+    width: 12px;
+}
+
+#btnDiscover .left {
+    background: url(../img/workshop.png) -814px -228px;
+    width: 41px;
+}
+
+#btnLogout .left,
+#btnLogin .left {
+    background: url(../img/workshop.png) -898px -228px;
+    width: 39px;
+}
+
+#btnUsername .left {
+    background: url(../img/workshop.png) -773px -228px;
+    width: 40px;
+}
+
+#btnSignup .left {
+    background: url(../img/workshop.png) -856px -228px;
+    width: 41px;
+}
+
+#menuBar {
+    background: url(../img/workshop.png) 0px -124px;
+    height: 26px;
+    width: 100%;
+}
+
+#menuBar .item {
+    color: #ffffff;
+    float: left;
+    font-size: 11px;
+    height: 26px;
+    position: relative;
+}
+
+#menuBar .item .itemWrapper {
+    cursor: pointer;
+    line-height: 23px;
+    height: 26px;
+    padding: 0px 10px;
+    text-shadow: #000000 0px 1px 0px;
+}
+
+#menuBar .selected {
+    background: url(../img/workshop.png) -191px -62px;
+}
+
+#menuBar .normalView {
+    background: url(../img/workshop.png) -191px -89px;
+    height: 16px;
+    margin-top: 5px;
+    width: 24px;
+}
+
+#menuBar .render {
+    background: url(../img/workshop.png) -216px -89px;
+    height: 16px;
+    margin-top: 5px;
+    width: 24px;
+}
+
+#menuBar .display {
+    background: url(../img/workshop.png) -241px -89px;
+    height: 16px;
+    margin-top: 5px;
+    width: 27px;
+}
+
+#menuBar .menuTooltip {
+    cursor: default;
+    display: none;
+    left: -4px;
+    position: absolute;
+    top: 26px;
+    width: 165px;
+    z-index: 3000;
+}
+
+#menuBar .menuTooltip .top {
+    background: url(../img/workshop.png) -524px -265px;
+    height: 5px;
+    width: 165px;
+}
+
+#menuBar .menuTooltip .content {
+    background: url(../img/workshop.png) -524px -271px;
+    width: 165px;
+}
+
+#menuBar .menuTooltip .tooltipItem {
+    cursor: pointer;
+    height: 26px;
+    line-height: 26px;
+    margin-left: 7px;
+    padding-left: 22px;
+    position: relative;
+    text-shadow: #000000 0px -1px 0px;
+    width: 127px;
+}
+
+#menuBar .menuTooltip .tooltipItem:hover {
+    background: url(../img/workshop.png) -623px -238px;
+}
+
+#menuBar .menuTooltip .tick {
+    background: url(../img/workshop.png) -690px -265px;
+    height: 10px;
+    left: 6px;
+    position: absolute;
+    top: 8px;
+    width: 12px;
+}
+
+#menuBar .menuTooltip .bottom {
+    background: url(../img/workshop.png) -524px -446px;
+    height: 10px;
+    width: 165px;
+}
+
+#footer {
+    background: url(../img/workshop.png) 0px -151px;
+    bottom: 0px;
+    color: #565656;
+    font-size: 9px;
+    height: 36px;
+    line-height: 14px;
+    padding-top: 6px;
+    position: fixed;
+    text-align: center;
+    text-shadow: #111111 0px -1px 1px;
+    width: 100%;
+    z-index: 10;
+}
+
+#footer a,
+#footer a:visited {
+    color: #64779b;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    color: #64779b;
+    text-decoration: underline;
+}
+
+#footer .camera {
+    cursor: pointer;
+    background: url(../img/workshop.png) -850px -85px;
+    height: 31px;
+    margin: 0px auto;
+    width: 60px;
+}
+
+#footer .twitter {
+    color: #b3b3b3;
+    font-size: 11px;
+    height: 34px;
+    line-height: 28px;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+}
+
+#footer .twitter .icon {
+    background: url(../img/workshop.png) -857px -703px;
+    display: inline-block;
+    float: left;
+    height: 26px;
+    margin-right: 5px;
+    width: 33px;
+}
+
+#footer .twitter a,
+#footer .twitter a:hover,
+#footer .twitter a:visited {
+    color: #b3b3b3;
+    text-decoration: none;
+}
+
+#main {
+    width: 100%;
+}
+
+#library {
+    color: #1b1b1b;
+    float: left;
+    width: 256px;
+}
+
+#library .title {
+    background: url(../img/workshop.png) 0px -196px;
+    color: #dedede;
+    font-size: 10px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+    text-shadow: #151515 0px 2px 0px;
+    width: 256px;
+}
+
+#library .title .close {
+    background: url(../img/workshop.png) -355px -85px;
+    cursor: pointer;
+    height: 15px;
+    position: absolute;
+    right: 6px;
+    top: 5px;
+    width: 24px;
+}
+
+#library .categoryContainer {
+    background: url(../img/workshop_leftColumn.png);
+    height: 33px;
+    position: relative;
+    width: 256px;
+}
+
+#partCategory {
+    background: url(../img/workshop.png) -366px -62px;
+    color: #dedede;
+    cursor: pointer;
+    font-size: 10px;
+    height: 22px;
+    line-height: 18px;
+    margin-left: 9px;
+    padding: 0px 27px 0px 12px;
+    text-shadow: #1A1A1A 0px 1px 1px;
+    width: 193px;
+}
+
+#partCategories {
+    cursor: pointer;
+    filter: alpha(opacity=0);
+    left: 9px;
+    margin: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    width: 230px;
+}
+
+#partWrapper {
+    position: relative;
+}
+
+#parts {
+    background: url(../img/workshop_leftColumn.png);
+    overflow: hidden;
+    width: 256px;
+}
+
+#parts_content {
+    overflow: hidden;
+    position: relative;
+    width: 240px;
+    float: left;
+}
+
+#parts_track {
+    float: left;   
+    width: 15px;
+} 
+
+#parts_handle {
+    cursor: pointer;
+    width: 15px;
+}
+
+#parts .part {
+    cursor: pointer;
+    float: left;
+    height: 50px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-top: 5px;
+    position: relative;
+    width: 50px;
+}
+
+#parts .part .loaderWrapper {
+    background: url(../img/workshop.png) -911px -62px;
+    height: 19px;
+    padding: 15px 16px 16px 15px;
+    width: 19px;
+}
+
+#parts .part .loader {
+    background: url(../img/workshop_loaderPart.gif);
+    height: 19px;
+    width: 19px;
+}
+
+#partsLoader {
+    margin: 10px 0px 0px 108px;
+}
+
+#partTooltip {
+    display: none;
+    height: 34px;
+    position: absolute;
+    z-index: 2000;
+}
+
+#partTooltip .left {
+    background: url(../img/workshop.png) -517px -1381px;
+    color: #ffffff;
+    float: left;
+    font-size: 9px;
+    height: 24px;
+    line-height: 24px;
+    min-width: 28px;
+    padding: 8px 0px 2px 11px;
+    text-align: center;
+    text-shadow: #0e1542 0px -1px 0px;
+}
+
+#partTooltip .right {
+    background: url(../img/workshop.png) -876px -1381px;
+    float: left;
+    height: 34px;
+    width: 11px;
+}
+
+#library .bottomSpacer {
+    background: url(../img/workshop_leftColumn.png);
+    height: 5px;
+    width: 256px;
+}
+
+#sceneContainer {
+    float: left;
+    position: relative;
+}
+
+#sceneContainer .top {
+    background: url(../img/workshop.png) 0px -194px;
+    height: 1px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+#openLib {
+    background: url(../img/workshop.png) -380px -85px;
+    cursor: pointer;
+    display: none;
+    height: 15px;
+    left: 5px;
+    position: absolute;
+    top: 5px;    
+    width: 24px;
+}
+
+#openTools {
+    background: url(../img/workshop.png) -380px -101px;
+    cursor: pointer;
+    display: none;
+    height: 15px;
+    position: absolute;
+    right: 5px;
+    top: 5px;    
+    width: 24px;
+}
+
+#scene {
+    //background: #fff;
+}
+
+#tools {
+    background: url(../img/workshop_rightColumn.png);
+    float: right;
+    overflow: hidden;
+    position: relative;
+    width: 251px;
+}
+
+#tools .title {
+    background: url(../img/workshop.png) -257px -196px;
+    color: #dedede;
+    font-size: 10px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+    text-shadow: #151515 0px 2px 0px;
+    width: 251px;
+}
+
+#tools .title .close {
+    background: url(../img/workshop.png) -355px -101px;
+    cursor: pointer;
+    height: 15px;
+    left: 6px;
+    position: absolute;
+    top: 5px;
+    width: 24px;
+}
+
+#hierarchy {
+    height: 217px;
+    width: 251px;
+}
+
+#hierarchy_container {
+    background: url(../img/workshop.png) -273px -237px;
+    height: 184px;
+    margin-left: 1px;
+    position: relative;
+    width: 250px;
+}
+
+#hierarchy_exit {
+    height: 184px;
+    margin-left: 3px;
+    width: 233px
+}
+
+#hierarchy_content {
+    height: 180px;
+    margin-left: 2px;
+    margin-top: 2px;
+    position: relative;
+    overflow: hidden;
+    width: 229px;
+    float: left;
+}
+
+#hierarchy_track {  
+    position: absolute;  
+    top: 0px;  
+    right: 0px;  
+    height: 184px;  
+    width: 15px;  
+} 
+
+#hierarchy_handle {
+    cursor: pointer;
+    width:15px;
+}
+
+#hierarchy_content .row {
+    cursor: pointer;
+    height: 20px;
+    position: relative;
+    width: 229px;
+}
+
+#hierarchy_content .rowSelected {
+    background: url(../img/workshop.png) -509px -196px;
+}
+
+#hierarchy_content .row .eye {
+    float: left;
+    height: 20px;
+    width: 22px;
+}
+
+#hierarchy_content .row .eyeOpen {
+    background: url(../img/workshop.png) -569px -87px;
+}
+
+#hierarchy_content .row .eyeOpenGrey {
+    background: url(../img/workshop.png) -750px -87px;
+}
+
+#hierarchy_content .row .eyeClosed {
+    background: url(../img/workshop.png) -592px -87px;
+}
+
+#hierarchy_content .row .eyeClosedGrey {
+    background: url(../img/workshop.png) -773px -87px;
+}
+
+#hierarchy_content .row .spacer {
+    float: left;
+    height: 20px;
+    width: 10px;
+}
+
+#hierarchy_content .row .arrow {
+    float: left;
+    height: 20px;
+    width: 17px;
+}
+
+#hierarchy_content .row .arrowOpen {
+    background: url(../img/workshop.png) -615px -87px;
+}
+
+#hierarchy_content .row .arrowClose {
+    background: url(../img/workshop.png) -633px -87px;
+}
+
+#hierarchy_content .row .icon {
+    float: left;
+    height: 20px;
+    width: 14px;
+}
+
+#hierarchy_content .row .name {
+    color: #dedede;
+    float: left;
+    font-size: 9px;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 7px;
+    overflow: hidden;
+    padding-right: 5px;
+    text-overflow: ellipsis;
+    text-shadow: #151515 0px -1px 0px;
+    white-space: nowrap;
+}
+
+#hierarchy_content .rowSelected .name {
+    
+}
+
+#hierarchy_content .row .name input {
+    border: 0px;
+    font: 9px "Lucida Grande", Lucida Sans Unicode, Arial, Helvetica, Verdana, sans-serif;
+    height: 13px;
+    margin: 4px 0px 0px 0px;
+    padding: 0px;
+}
+
+#hierarchy_content .row .iconAssembly {
+    background: url(../img/workshop.png) -651px -87px;
+}
+
+#hierarchy_content .row .iconPart {
+    background: url(../img/workshop.png) -666px -87px;
+}
+
+#hierarchyMoveBar {
+    background: url(../img/workshop.png) -740px -219px;
+    height: 8px;
+    position: absolute;
+    right: 0px;
+    z-index: 500;
+}
+
+#hierarchyMoveFrame {
+    background: url(../img/workshop.png) -741px -196px;
+    height: 22px;
+    position: absolute;
+    left: 0px;
+    width: 229px;
+    z-index: 500;
+}
+
+#hierarchy .bottom {
+    height: 34px;
+    padding-right: 15px;
+    width: 236px;
+}
+
+#hierarchy .bottom .button {
+    cursor: pointer;
+    float: right;
+    height: 23px;
+    margin-left: 8px;
+    margin-top: 6px;
+    width: 22px;
+}
+
+#hierarchy .bottom .buttonDel {
+    background: url(../img/workshop.png) -727px -87px;
+}
+
+#hierarchy .bottom .buttonDup {
+    background: url(../img/workshop.png) -704px -87px;
+}
+
+#hierarchy .bottom .buttonAdd {
+    background: url(../img/workshop.png) -681px -87px;
+}
+
+#tools .darkSep {
+    background: url(../img/workshop.png) -546px -85px;
+    height: 1px;
+    width: 251px;
+}
+
+#inspector {
+    width: 251px;
+}
+
+#inspector .label {
+    color: #dedede;
+    float: left;
+    font-size: 10px;
+    height: 18px;
+    line-height: 18px;
+    text-align: right;
+    text-shadow: #151515 0px 2px 0px;
+    width: 65px;
+}
+
+#inspector .colourWrapper {
+    background: url(../img/workshop.png) -405px -85px;
+    cursor: pointer;
+    float: left;
+    height: 19px;
+    margin-left: 4px;
+    position: relative;
+    width: 34px;
+}
+
+#colour {
+    height: 12px;
+    margin-top: 3px;
+    margin-left: 3px;
+    width: 28px;
+}
+
+#inspector .colourFrame {
+    background: url(../img/workshop.png) -405px -85px;
+    height: 19px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 34px;
+}
+
+#inspector .gridWrapper {
+    cursor: pointer;
+    float: left;
+    height: 22px;
+    margin-left: 3px;
+    position: relative;
+    width: 135px;
+}
+
+#gridType {
+    background: url(../img/workshop.png) -775px -62px;
+    color: #dedede;
+    cursor: pointer;
+    height: 22px;
+    width: 135px;
+}
+
+#gridType .icon {
+    float: left;
+    height: 14px;
+    margin-left: 11px;
+    margin-top: 2px;
+    width: 13px;
+}
+
+#gridType .smallIcon {
+    background: url(../img/workshop.png)  -469px -85px;
+}
+
+#gridType .mediumIcon {
+    background: url(../img/workshop.png) -483px -85px;
+}
+
+#gridType .largeIcon {
+    background: url(../img/workshop.png) -497px -85px;
+}
+
+#gridType .text {
+    color: #dedede;
+    float: left;
+    font-size: 10px;
+    height: 22px;
+    line-height: 18px;
+    margin-left: 4px;
+    text-shadow: #1A1A1A 0px 1px 1px;
+}
+
+#gridTypes {
+    cursor: pointer;
+    filter: alpha(opacity=0);
+    margin: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    width: 135px;
+}
+
+#inspector .sliderTrack {
+    background: url(../img/workshop.png)  -420px -105px;
+    float: left;
+    height: 15px;
+    margin-left: 4px;
+    margin-top: 4px;
+    width: 133px;
+}
+
+#inspector .sliderHandle {
+    background: url(../img/workshop.png)  -405px -105px;
+    cursor: pointer;
+    height: 15px;
+    width: 14px;
+}
+
+#inspector .value {
+    background: url(../img/workshop.png)  -511px -85px;
+    border: 0px;
+    color: #dedede;
+    float: left;
+    font-family: "Lucida Grande", Lucida Sans Unicode, Arial, Helvetica, Verdana, sans-serif;
+    font-size: 9px;
+    height: 17px;
+    line-height: 17px;
+    margin: 1px 10px 0px 5px;
+    padding: 0px;
+    text-align: center;
+    text-shadow: #151515 0px 2px 0px;
+    width: 34px;
+}
+
+#colourPicker {
+    display: none;
+    height: 335px;
+    position: absolute;
+    top: 85px;
+    width: 271px;
+    z-index: 1000;
+}
+
+#colourPicker .title {
+    background: url(../img/workshop.png) 0px -237px;
+    color: #dedede;
+    cursor: default;
+    font-size: 10px;
+    height: 40px;
+    line-height: 40px;
+    padding: 7px 10px 0px 10px;
+    position: relative;
+    text-align: center;
+    text-shadow: #151515 0px 2px 0px;
+    width: 251px;
+}
+
+#colourPicker .title .close {
+    background: url(../img/workshop.png) -191px -108px;
+    cursor: pointer;
+    height: 12px;
+    left: 16px;
+    position: absolute;
+    top: 13px;
+    width: 12px;
+}
+
+#colourPicker .type {
+    background: url(../img/workshop.png) 0px -284px;
+    height: 38px;
+    padding: 0px 10px;
+    width: 251px;
+}
+
+#colourPicker .type .label {
+    color: #dedede;
+    float: left;
+    font-size: 10px;
+    height: 18px;
+    line-height: 18px;
+    text-align: right;
+    text-shadow: #151515 0px 2px 0px;
+    width: 65px;
+}
+
+#colourPicker .type .selectWrapper {
+    cursor: pointer;
+    float: left;
+    height: 22px;
+    margin-left: 3px;
+    position: relative;
+    width: 175px;
+}
+
+#colourType {
+    background: url(../img/workshop.png) -599px -62px;
+    color: #dedede;
+    cursor: pointer;
+    font-size: 10px;
+    height: 22px;
+    line-height: 18px;
+    padding: 0px 27px 0px 12px;
+    text-shadow: #1A1A1A 0px 1px 1px;
+    width: 136px;
+}
+
+#colourTypes {
+    cursor: pointer;
+    filter: alpha(opacity=0);
+    margin: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    width: 175px;
+}
+
+#colourPicker .spacer {
+    background: url(../img/workshop.png) 0px -322px;
+    height: 5px;
+    width: 271px;
+}
+
+#colourPicker .content {
+    background: url(../img/workshop.png) 0px -327px;
+    height: 234px;
+    padding: 0px 10px;
+    width: 251px;
+}
+
+#colours {
+    height: 234px;
+    width: 251px;
+}
+
+#colours_content {
+    height: 234px;
+    overflow: hidden;
+    width: 235px;
+    float: left;
+}
+
+#colours_track {
+    float: left; 
+    height: 234px;  
+    width: 15px;
+} 
+
+#colours_handle {
+    cursor: pointer;
+    width: 15px;
+}
+
+#colours .colourWrapper {
+    background: url(../img/workshop.png) -405px -85px;
+    cursor: pointer;
+    float: left;
+    height: 19px;
+    margin: 4px 0px 3px 9px;
+    position: relative;
+    width: 34px;
+}
+
+#colours .colour {
+    height: 12px;
+    margin-top: 3px;
+    margin-left: 3px;
+    width: 28px;
+}
+
+#colours .colourFrame {
+    background: url(../img/workshop.png) -405px -85px;
+    height: 19px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 34px;
+}
+
+#colours .reference {
+    color: #dedede;
+    float: left;
+    font-size: 10px;
+    height: 19px;
+    line-height: 18px;
+    margin-top: 4px;
+    text-align: center;
+    text-shadow: #151515 0px 2px 0px;
+    width: 50px;
+}
+
+#colours .name {
+    color: #dedede;
+    float: left;
+    font-size: 10px;
+    height: 19px;
+    line-height: 18px;
+    margin-top: 4px;
+    text-shadow: #151515 0px 2px 0px;
+    width: 142px;
+}
+
+#colourPicker .bottom {
+    background: url(../img/workshop.png) 0px -561px;
+    height: 19px;
+    overflow: hidden;
+    width: 271px;
+}
+
+#deleteTooltip {
+    background: url(../img/workshop.png) -524px -217px;
+    color: #dedede;
+    display: none;
+    font-size: 10px;
+    height: 47px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 98px;
+    z-index: 2000;
+}
+
+#deleteTooltip .title {
+    height: 22px;
+    line-height: 22px;
+    margin-left: 4px;
+    margin-top: 1px;
+}
+
+#deleteTooltip .action {
+    background: url(../img/workshop.png) -623px -217px;
+    cursor: pointer;
+    height: 20px;
+    margin-left: 4px;
+    width: 90px;
+}
+
+#deleteTooltip .action .label {
+    color: #ffffff;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 10px;
+    text-shadow: #00234B 0px -1px 0px;
+}
+
+#deleteTooltip .action .icon {
+    background: url(../img/workshop.png) -714px -217px;
+    float: right;
+    height: 13px;
+    margin-right: 4px;
+    margin-top: 3px;
+    width: 12px;
+}
+
+#windowBackground {
+    background: url(../img/workshop_background.png);
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    z-index: 10000;
+}
+
+#alert {
+    display: none;
+    height: 177px;
+    position: absolute;
+    top: 120px;
+    width: 516px;
+    z-index: 11000;
+}
+
+#alert .header,
+#properties .header,
+#contact .header {
+    background: url(../img/workshop.png) 0px -581px;
+    color: #ffffff;
+    font-size: 12px;
+    height: 35px;
+    line-height: 35px;
+    padding: 1px 8px 0px 8px;
+    position: relative;
+    text-align: center;
+    text-shadow: #000000 0px -1px 0px;
+    width: 500px;
+}
+
+#alert .close,
+#open .header .close,
+#save .header .close,
+#properties .header .close,
+#login .header .close,
+#signup .header .close,
+#contact .header .close,
+#help .header .close {
+    background: url(../img/workshop.png) -269px -89px;
+    cursor: pointer;
+    height: 12px;
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    width: 12px;
+    
+}
+
+#alert .content {
+    background: url(../img/workshop.png) 0px -618px;
+    color: #ffffff;
+    font-size: 11px;
+    height: 60px;
+    line-height: 20px;
+    padding: 15px 28px 15px 28px;
+    position: relative;
+    text-shadow: #000000 0px -1px 1px;
+    width: 460px;
+}
+
+#alert .WebGLDeactivated {
+    height: 90px;
+    left: -20px;
+    position: relative;
+    top: -15px;
+    width: 500px;
+}
+
+#alert .WebGLDeactivated .WebGL {
+    background: url(../img/workshop.png) -690px -366px;
+    cursor: pointer;
+    float: left;
+    height: 90px;
+    width: 216px
+}
+
+#alert .WebGLDeactivated .browser {
+    cursor: pointer;
+    float: left;
+    height: 58px;
+    margin: 18px 12px 0px 0px;
+    width: 58px;
+}
+
+#alert .WebGLDeactivated .firefox {
+    background: url(../img/workshop.png) -690px -307px;
+}
+
+#alert .WebGLDeactivated .safari {
+    background: url(../img/workshop.png) -749px -307px;
+}
+
+#alert .WebGLDeactivated .chrome {
+    background: url(../img/workshop.png) -808px -307px;
+}
+
+#alert .WebGLDeactivated .opera {
+    background: url(../img/workshop.png) -867px -307px;
+}
+
+#alert .footer,
+#properties .footer,
+#contact .footer {
+    background: url(../img/workshop.png) 0px -709px;
+    height: 40px;
+    padding: 0px 8px 10px 8px;
+    width: 500px;
+}
+
+#alertButton1,
+#saveButton1 {
+    cursor: pointer;
+    float: left;
+    height: 23px;
+    margin: 9px 0px 0px 9px; 
+}
+
+#alertButton2,
+#openButton1,
+#saveButton2,
+#propertiesButton1,
+#loginButton1,
+#signupButton1,
+#contactButton1 {
+    cursor: pointer;
+    float: right;
+    height: 23px;
+    margin: 9px 13px 0px 0px; 
+}
+
+#alertButton3,
+#openButton2,
+#saveButton3,
+#propertiesButton2,
+#loginButton2,
+#signupButton2,
+#contactButton2,
+#helpButton1 {
+    cursor: pointer;
+    float: right;
+    height: 23px;
+    margin: 9px 9px 0px 0px; 
+}
+
+#alert .btnLeft,
+#open .btnLeft,
+#save .btnLeft,
+#properties .btnLeft,
+#login .btnLeft,
+#signup .btnLeft,
+#contact .btnLeft,
+#help .btnLeft {
+    float: left;
+    height: 23px;
+    width: 16px;
+}
+
+#alert .btnMiddle,
+#open .btnMiddle,
+#save .btnMiddle,
+#properties .btnMiddle,
+#login .btnMiddle,
+#signup .btnMiddle,
+#contact .btnMiddle,
+#help .btnMiddle {
+    color: #ffffff;
+    float: left;
+    font-size: 11px;
+    height: 23px;
+    line-height: 22px;
+}
+
+#alert .btnRight,
+#open .btnRight,
+#save .btnRight,
+#properties .btnRight,
+#login .btnRight,
+#signup .btnRight,
+#contact .btnRight,
+#help .btnRight {
+    float: left;
+    height: 23px;
+    width: 16px;
+}
+
+#alert .btnInactive .btnLeft,
+#open .btnInactive .btnLeft,
+#save .btnInactive .btnLeft,
+#properties .btnInactive .btnLeft,
+#login .btnInactive .btnLeft,
+#signup .btnInactive .btnLeft,
+#contact .btnInactive .btnLeft,
+#help .btnInactive .btnLeft {
+    background: url(../img/workshop.png) -273px -422px;
+}
+
+#alert .btnInactive .btnMiddle,
+#open .btnInactive .btnMiddle,
+#save .btnInactive .btnMiddle,
+#properties .btnInactive .btnMiddle,
+#login .btnInactive .btnMiddle,
+#signup .btnInactive .btnMiddle,
+#contact .btnInactive .btnMiddle,
+#help .btnInactive .btnMiddle {
+    background: url(../img/workshop.png) -289px -422px;
+    text-shadow: #000000 0px -1px 0px;
+}
+
+#alert .btnInactive .btnRight,
+#open .btnInactive .btnRight,
+#save .btnInactive .btnRight,
+#properties .btnInactive .btnRight,
+#login .btnInactive .btnRight,
+#signup .btnInactive .btnRight,
+#contact .btnInactive .btnRight,
+#help .btnInactive .btnRight {
+    background: url(../img/workshop.png) -507px -422px;
+}
+
+#alert .btnActive .btnLeft,
+#open .btnActive .btnLeft,
+#save .btnActive .btnLeft ,
+#properties .btnActive .btnLeft,
+#login .btnActive .btnLeft,
+#signup .btnActive .btnLeft,
+#contact .btnActive .btnLeft,
+#help .btnActive .btnLeft {
+    background: url(../img/workshop.png) -273px -446px;
+}
+
+#alert .btnActive .btnMiddle,
+#open .btnActive .btnMiddle,
+#save .btnActive .btnMiddle,
+#properties .btnActive .btnMiddle,
+#login .btnActive .btnMiddle,
+#signup .btnActive .btnMiddle,
+#contact .btnActive .btnMiddle,
+#help .btnActive .btnMiddle {
+    background: url(../img/workshop.png) -289px -446px;
+    text-shadow: #18215A 0px -1px 1px;
+}
+
+#alert .btnActive .btnRight,
+#open .btnActive .btnRight,
+#save .btnActive .btnRight,
+#properties .btnActive .btnRight,
+#login .btnActive .btnRight,
+#signup .btnActive .btnRight,
+#contact .btnActive .btnRight,
+#help .btnActive .btnRight {
+    background: url(../img/workshop.png) -507px -446px;
+}
+
+#alert .btnDisabled,
+#open .btnDisabled,
+#save .btnDisabled,
+#properties .btnDisabled,
+#login .btnDisabled,
+#signup .btnDisabled,
+#contact .btnDisabled,
+#help .btnDisabled {
+    cursor: default;
+}
+
+#alert .btnDisabled .btnLeft,
+#open .btnDisabled .btnLeft,
+#save .btnDisabled .btnLeft,
+#properties .btnDisabled .btnLeft,
+#login .btnDisabled .btnLeft,
+#signup .btnDisabled .btnLeft,
+#contact .btnDisabled .btnLeft,
+#help .btnDisabled .btnLeft {
+    background: url(../img/workshop.png) -273px -470px;
+}
+
+#alert .btnDisabled .btnMiddle,
+#open .btnDisabled .btnMiddle,
+#save .btnDisabled .btnMiddle,
+#properties .btnDisabled .btnMiddle,
+#login .btnDisabled .btnMiddle,
+#signup .btnDisabled .btnMiddle,
+#contact .btnDisabled .btnMiddle,
+#help .btnDisabled .btnMiddle {
+    background: url(../img/workshop.png) -289px -470px;
+    color: #434855;
+    text-shadow: #192031 0px -1px 1px;
+}
+
+#alert .btnDisabled .btnRight,
+#open .btnDisabled .btnRight,
+#save .btnDisabled .btnRight,
+#properties .btnDisabled .btnRight,
+#login .btnDisabled .btnRight,
+#signup .btnDisabled .btnRight,
+#contact .btnDisabled .btnRight,
+#help .btnDisabled .btnRight {
+    background: url(../img/workshop.png) -507px -470px;
+}
+
+#loading {
+    display: none;
+    height: 102px;
+    position: absolute;
+    top: 120px;
+    width: 363px;
+    z-index: 11000;
+}
+
+#loading .header {
+    background: url(../img/workshop.png) -524px -457px;
+    color: #ffffff;
+    font-size: 12px;
+    height: 35px;
+    line-height: 35px;
+    padding: 1px 8px 1px 20px;
+    text-shadow: #000000 0px -1px 0px;
+    width: 335px;
+}
+
+#loadingProgress {
+    float: right;
+    margin-right: 12px;
+}
+
+#loading .content {
+    background: url(../img/workshop.png) -524px -495px;
+    height: 31px;
+    padding: 23px 8px 10px 8px;
+    width: 347px;
+}
+
+#loading .track {
+    background: url(../img/workshop.png) -524px -560px;
+    height: 4px;
+    margin-left: 12px;
+    padding: 2px 2px 3px 2px;
+    width: 319px;
+}
+
+#loadingBar {
+    background: url(../img/workshop_loadingBar.png) 0px 0px;
+    height: 4px;
+    position: relative;
+}
+
+#loading .roundCorner {
+    background: url(../img/workshop.png) -848px -560px;
+    height: 4px;
+    position: absolute;
+    top: 0px;
+    width: 1px;
+}
+
+#open,
+#save,
+#help {
+    display: none;
+    height: 466px;
+    position: absolute;
+    top: 120px;
+    width: 716px;
+    z-index: 11000;
+}
+
+#open .header,
+#save .header,
+#help .header {
+    background: url(../img/workshop.png) 0px -760px;
+    color: #ffffff;
+    font-size: 12px;
+    height: 35px;
+    line-height: 35px;
+    padding: 1px 8px 0px 8px;
+    position: relative;
+    text-align: center;
+    text-shadow: #000000 0px -1px 0px;
+    width: 700px;
+}
+
+#open .back,
+#save .back {
+    background: url(../img/workshop.png) -727px -627px;
+    cursor: pointer;
+    height: 35px;
+    left: 13px;
+    position: absolute;
+    top: 6px;
+    width: 34px;
+}
+
+#open .backDeactivated,
+#save .backDeactivated {
+    background: url(../img/workshop.png) -691px -627px;
+    cursor: default;
+}
+
+#open .refresh,
+#save .refresh {
+    background: url(../img/workshop.png) -282px -89px;
+    cursor: pointer;
+    height: 12px;
+    position: absolute;
+    right: 31px;
+    top: 8px;
+    width: 15px;
+}
+
+#open .topBar,
+#save .topBar {
+    background: url(../img/workshop.png) 0px -796px;
+    height: 30px;
+    padding: 0px 8px;
+    width: 700px;
+}
+
+#open .topBar .selectWrapper {
+    float: left;
+    height: 30px;
+    margin-left: 178px;
+    position: relative;
+    width: 249px;
+}
+
+#openSelectFolder {
+    background: url(../img/workshop.png) -517px -584px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 10px;
+    height: 22px;
+    line-height: 18px;
+    padding: 0px 27px 0px 12px;
+    text-shadow: #1A1A1A 0px 1px 0px;
+    width: 210px;
+}
+
+#openSelectFolders {
+    cursor: pointer;
+    filter: alpha(opacity=0);
+    left: 0px;
+    margin: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    width: 247px;
+}
+
+#open .topBar .searchWrapper {
+    background: url(../img/workshop.png) -691px -607px;
+    float: left;
+    height: 19px;
+    margin-left: 8px;
+    width: 255px;
+}
+
+#openSearch {
+    background: none;
+    border: 0px;
+    color: #ffffff;
+    font: 10px "Lucida Grande", Lucida Sans Unicode, Arial, Helvetica, Verdana, sans-serif;
+    height: 19px;
+    line-height: 18px;
+    margin: 0px 8px 0px 27px;
+    padding: 0px;
+    width: 220px;
+}
+
+#save .topBar .label {
+    color: #ffffff;
+    float: left;
+    font-size: 11px;
+    height: 19px;
+    line-height: 18px;
+    margin-right: 10px;
+    text-align: right;
+    width: 170px;
+}
+
+#modelName {
+    background: url(../img/workshop.png) 0px -1229px;
+    border: 0px;
+    color: #ffffff;
+    font: 11px "Lucida Grande", Lucida Sans Unicode, Arial, Helvetica, Verdana, sans-serif;
+    height: 19px;
+    line-height: 18px;
+    padding: 0px 5px 0px 5px;
+    width: 500px;
+}
+
+#open .content,
+#save .content {
+    background: url(../img/workshop.png) 0px -827px;
+    height: 348px;
+    padding: 1px 8px;
+    width: 700px;
+}
+
+#open .leftColumn,
+#save .leftColumn {
+    float: left;
+    height: 343px;
+    padding-top: 5px;
+    width: 179px;
+}
+
+#open .leftColumn .row,
+#save .leftColumn .row {
+    cursor: pointer;
+    height: 24px;
+    text-shadow: #000000 0px 1px 2px;
+    width: 179px;
+}
+
+#open .leftColumn .selected,
+#save .leftColumn .selected {
+    background: url(../img/workshop.png) -517px -735px;
+    text-shadow: #162D5A 0px 1px 2px;
+}
+
+#open .leftColumn .row .icon,
+#save .leftColumn .row .icon {
+    float: left;
+    height: 24px;
+    width: 41px;
+}
+
+#open .leftColumn .row .home,
+#save .leftColumn .row .home {
+    background: url(../img/workshop.png) -517px -710px;
+}
+
+#open .leftColumn .row .public,
+#save .leftColumn .row .public {
+    background: url(../img/workshop.png) -559px -710px;
+}
+
+#open .leftColumn .row .name,
+#save .leftColumn .row .name {
+    color: #ffffff;
+    float: left;
+    font-size: 11px;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 133px;
+    white-space: nowrap;
+}
+
+#open_content,
+#save_content {
+    float: left;
+    height: 348px;
+    margin-left: 1px;
+    position: relative;
+    overflow: hidden;
+    width: 505px;
+}
+
+#openFolderLoader,
+#saveWindowLoader {
+    background: url(../img/workshop_loaderFolder.gif);
+    height: 24px;
+    margin: 30px 0px 0px 248px;
+    width: 24px;
+}
+
+#open_content .item,
+#save_content .item {
+    cursor: pointer;
+    float: left;
+    height: 102px;
+    margin: 10px 9px 0px 10px;
+    position: relative;
+    width: 102px;
+}
+
+#open_content .itemSelected,
+#save_content .itemSelected {
+    background: url(../img/workshop.png) -517px -607px;
+}
+
+#open_content .item .folderIcon,
+#save_content .item .folderIcon {
+    background: url(../img/workshop.png) -620px -607px;
+    height: 53px;
+    left: 16px;
+    position: absolute;
+    top: 15px;
+    width: 70px;
+}
+
+#open_content .item .thumbnailWrapper,
+#save_content .item .thumbnailWrapper {
+    height: 55px;
+    left: 16px;
+    position: absolute;
+    top: 15px;
+    width: 70px;
+}
+
+#open_content .item .thumbnailBg,
+#save_content .item .thumbnailBg {
+    background: url(../img/workshop.png) -788px -703px;
+    height: 53px;
+    left: 1px;
+    position: absolute;
+    top: 1px;
+    width: 68px;
+}
+
+#open_content .item .thumbnail,
+#save_content .item .thumbnail {
+    height: 53px;
+    left: 1px;
+    position: absolute;
+    top: 1px;
+    width: 68px;
+}
+
+#open_content .item .border,
+#save_content .item .border {
+    background: url(../img/workshop.png) -717px -703px;
+    height: 55px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 70px;
+}
+
+#open_content .item .private,
+#save_content .item .private {
+    background: url(../img/workshop.png) -691px -663px;
+    cursor: pointer;
+    height: 15px;
+    left: -2px;
+    position: absolute;
+    top: -1px;
+    width: 18px;
+}
+
+#open_content .item .name,
+#save_content .item .name {
+    bottom: 1px;
+    color: #ffffff;
+    font-size: 10px;
+    height: 30px;
+    left: 8px;
+    line-height: 30px;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-shadow: #000000 0px 1px 0px;
+    width: 86px;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#open_content .spacer,
+#save_content .spacer {
+    float: left;
+    height: 10px;
+    width: 700px;
+}
+
+#open_track,
+#save_track {
+    float: left; 
+    height: 338px;
+    margin-top: 5px;
+    width: 15px;
+}
+
+#open_handle,
+#save_handle {
+    cursor: pointer;
+    width: 15px;
+}
+
+#open .footer,
+#save .footer,
+#help .footer {
+    background: url(../img/workshop.png) 0px -1178px;
+    height: 40px;
+    padding: 0px 8px 10px 8px;
+    width: 700px;
+}
+
+#modelTooltip {
+    background: url(../img/workshop.png) -717px -1084px;
+    display: none;
+    height: 62px;
+    position: absolute;
+    width: 203px;
+    z-index: 11001;
+}
+
+#modelTooltip .row1 {
+    color: #ffffff;
+    font-size: 11px;
+    height: 20px;
+    margin-left: 11px;
+    margin-top: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-shadow: #163773 0px 1px 2px;
+    white-space: nowrap;
+    width: 186px;
+}
+
+#modelTooltip .parts {
+    float: right;
+    height: 19px;
+    margin-left: 5px;
+}
+
+#modelTooltip .parts .left {
+    background: url(../img/workshop.png) -921px -1084px;
+    float: left;
+    height: 19px;
+    width: 25px;
+}
+
+#modelTooltip .parts .middle {
+    background: url(../img/workshop.png) -946px -1084px;
+    color: #9ebcf5;
+    float: left;
+    font-size: 9px;
+    height: 19px;
+    line-height: 18px;
+    padding-left: 2px;
+    text-shadow: #0f2650 0px 1px 2px;
+}
+
+#modelTooltip .parts .right {
+    background: url(../img/workshop.png) -983px -1084px;
+    float: left;
+    height: 19px;
+    width: 8px;
+}
+
+#modelTooltip .designerWrapper {
+    color: #9ebcf5;
+    font-size: 9px;
+    margin-left: 11px;
+    text-shadow: #163773 0px 1px 2px;
+}
+
+#newFolder {
+    background: url(../img/workshop.png) 0px -1229px;
+    border: 0px;
+    color: #ffffff;
+    display: none;
+    float: left;
+    font: 11px "Lucida Grande", Lucida Sans Unicode, Arial, Helvetica, Verdana, sans-serif;
+    height: 19px;
+    line-height: 18px;
+    margin-left: 13px;
+    margin-top: 9px;
+    padding: 0px 5px 0px 5px;
+    width: 140px;
+}
+
+#newFolderBtn1 {
+    cursor: pointer;
+    display: none;
+    float: left;
+    height: 23px;
+    margin: 9px 0px 0px 15px;    
+}
+
+#newFolderBtn2 {
+    cursor: pointer;
+    display: none;
+    float: left;
+    height: 23px;
+    margin: 9px 0px 0px 13px;    
+}
+
+#properties {
+    display: none;
+    height: 277px;
+    position: absolute;
+    top: 120px;
+    width: 516px;
+    z-index: 11000;
+}
+
+#properties .header .lock {
+    cursor: pointer;
+    height: 15px;
+    left: 14px;
+    position: absolute;
+    top: 8px;
+    width: 18px;
+}
+
+#properties .header .public {
+    background: url(../img/workshop.png) -710px -663px;
+}
+
+#properties .header .private {
+    background: url(../img/workshop.png) -691px -663px;
+}
+
+#properties .content {
+    background: url(../img/workshop.png) 0px -1249px;
+    height: 193px;
+    padding: 0px 8px;
+    position: relative;
+    width: 500px;
+}
+
+#properties .content .item {
+    height: 95px;
+    padding-top: 1px;
+    width: 500px;
+}
+
+#properties .content .item .label,
+#contact .label {
+    color: #ffffff;
+    float: left;
+    font-size: 11px;
+    margin-right: 15px;
+    margin-top: 17px;
+    text-align: right;
+    text-shadow: #000000 0px 1px 0px;
+    width: 105px;
+}
+
+#properties .content .item .thumbnailWrapper {
+    background: url(../img/workshop.png) -763px -627px;
+    float: left;
+    height: 75px;
+    margin-top: 10px;
+    position: relative;
+    width: 100px;
+}
+
+#properties .content .item .thumbnailWrapper .thumbnailBg {
+    background: #1b1b1b;
+    height: 75px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100px;
+}
+
+#properties .content .item .thumbnailWrapper .thumbnail {
+    height: 75px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100px;
+}
+
+#properties .content .item .thumbnailWrapper .border {
+    background: url(../img/workshop.png) -864px -627px;
+    height: 75px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100px;
+}
+
+#properties .content .item .help {
+    color: #6f6f6f;
+    float: left;
+    font-size: 10px;
+    line-height: 1.6em;
+    margin-left: 10px;
+    margin-top: 13px;
+    text-shadow: #000000 0px 1px 0px;
+    width: 270px;
+}
+
+#propertiesDescription,
+#contactMessage {
+    background: url(../img/workshop.png) -517px -1229px;
+    color: #ffffff;
+    border: none;
+    float: left;
+    font: 11px "Lucida Grande", Lucida Sans Unicode, Arial, Helvetica, Verdana, sans-serif;
+    height: 61px;
+    margin-top: 10px;
+    overflow: auto;
+    padding: 7px;
+    resize: none;
+    text-shadow: #000000 0px 1px 0px;
+    width: 356px;
+}
+
+#loadingWheel {
+    background: url(../img/workshop.png) -888px -457px;
+    display: none;
+    height: 48px;
+    padding: 15px 22px 24px 22px;
+    position: absolute;
+    top: 120px;
+    width: 48px;
+    z-index: 11000;
+}
+
+#loadingWheel .gif {
+    background: url(../img/workshop_loaderSave.gif);
+    width: 48px;
+    height: 48px;
+}
+
+#login {
+    display: none;
+    height: 204px;
+    position: absolute;
+    top: 120px;
+    width: 311px;
+    z-index: 11000;
+}
+
+#login .header,
+#signup .header {
+    background: url(../img/workshop.png) -717px -759px;
+    color: #ffffff;
+    font-size: 12px;
+    height: 35px;
+    line-height: 35px;
+    padding: 1px 8px 0px 8px;
+    position: relative;
+    text-align: center;
+    text-shadow: #000000 0px -1px 0px;
+    width: 295px;
+}
+
+#login .content {
+    background: url(../img/workshop.png) -717px -796px;
+    height:114px;
+    padding: 1px 8px 1px 8px;
+    width: 295px;
+}
+
+#login .content .field,
+#signup .content .field {
+    border: 0px;
+    color: #ffffff;
+    font: 11px "Lucida Grande", Lucida Sans Unicode, Arial, Helvetica, Verdana, sans-serif;
+    height: 19px;
+    padding: 0px 5px 0px 33px;
+    width: 217px;
+}
+
+#loginUsername,
+#signupUsername {
+    background: url(../img/workshop.png) -717px -964px;
+    margin: 20px 20px 0px 20px;
+}
+
+#login .loginUsernameError,
+#signup .signupUsernameError {
+    background: url(../img/workshop.png) -717px -1004px;
+    color: #ffffff;
+}
+
+#loginPassword,
+#signupPassword {
+    background: url(../img/workshop.png) -717px -984px;
+    margin: 10px 20px 0px 20px;
+}
+
+#login .loginPasswordError,
+#signup .signupPasswordError {
+    background: url(../img/workshop.png) -717px -1024px;
+}
+
+#login .checkbox {
+    cursor: pointer;
+    float: right;
+    height: 13px;
+    margin: 15px 9px 0px 0px;
+    width: 13px;
+}
+
+#login .checkboxActive {
+    background: url(../img/workshop.png) -973px -964px;
+}
+
+#login .checkboxInactive {
+    background: url(../img/workshop.png) -987px -964px;
+}
+
+#login .checkboxLabel {
+    color: #ffffff;
+    float: right;
+    font-size: 11px;
+    height: 20px;
+    line-height: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    text-shadow: #000000 0px -1px;
+}
+
+#login .footer,
+#signup .footer {
+    background: url(../img/workshop.png) -717px -913px;
+    height: 40px;
+    padding: 0px 8px 10px 8px;
+    width: 295px;
+}
+
+#signup {
+    display: none;
+    height: 176px;
+    position: absolute;
+    top: 120px;
+    width: 311px;
+    z-index: 11000;
+}
+
+#signup .content {
+    background: url(../img/workshop.png) -717px -796px;
+    height: 88px;
+    padding: 1px 8px 0px 8px;
+    width: 295px;
+}
+
+#signup .border {
+    background: url(../img/workshop.png) -717px -911px;
+    height: 1px;
+    padding: 0px 8px;
+    width: 295px;
+}
+
+#contact {
+    display: none;
+    height: 277px;
+    position: absolute;
+    top: 120px;
+    width: 516px;
+    z-index: 11000;
+}
+
+#contact .email {
+    background: url(../img/workshop.png) 0px -1249px;
+    height: 38px;
+    padding: 1px 8px 0px 8px;
+    width: 500px;
+}
+
+#contactEmail {
+    background: url(../img/workshop.png) -717px -1044px;
+    border: 0px;
+    color: #ffffff;
+    font: 11px "Lucida Grande", Lucida Sans Unicode, Arial, Helvetica, Verdana, sans-serif;
+    height: 19px;
+    margin-top: 10px;
+    padding: 0px 5px 0px 5px;
+    width: 360px;
+}
+
+#contact .emailError {
+    background: url(../img/workshop.png) -717px -1064px;
+}
+
+#contact .message {
+    background: url(../img/workshop.png) 0px -1345px;
+    height: 95px;
+    padding: 1px 8px;
+    width: 500px;
+}
+
+#contact .messageError {
+    background: url(../img/workshop.png) -517px -1305px;
+}
+
+#help .content {
+    background: url(../img/workshop.png) 0px -1443px;
+    height: 378px;
+    padding: 1px 8px;
+    width: 700px;
+}
+
+#help_content {
+    float: left;
+    height: 378px;
+    position: relative;
+    overflow: hidden;
+    width: 685px;
+}
+
+#help_content .title {
+    color: #dedede;
+    font-size: 15px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 15px;
+    text-shadow: #000000 0px 1px 2px;
+}
+
+#help_content .separator {
+    background: url(../img/workshop.png) -8px -1443px;
+    height: 2px;
+    width: 100p%;
+}
+
+#help_content .label {
+    color: #FF7400;
+    float: left;
+    font-size: 11px;
+    line-height: 1.8em;
+    margin: 5px 0px 5px 0px;
+    text-align: center;
+    width: 150px;
+}
+
+#help_content .action {
+    color: #dedede;
+    float: left;
+    font-size: 11px;
+    line-height: 1.8em;
+    margin: 5px 10px 5px 0px;
+    width: 525px;
+}
+
+#help_track {
+    float: left; 
+    height: 378px;
+    width: 15px;
+}
+
+#help_handle {
+    cursor: pointer;
+    width: 15px;
+}
+
+/*---------------------------------------------------------------------------------------------*/

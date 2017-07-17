@@ -1,0 +1,530 @@
+/*---------------------------------------------------------------------------------------------*/
+/* CSS commun                                                                                  */
+/*                                                                                             */
+/* Date de création:        2011-12-11                                                         */
+/* Date de modification:    2012-09-06                                                         */
+/*---------------------------------------------------------------------------------------------*/
+
+body {
+	color: #000000;
+	font: 11px "Lucida Grande", Lucida Sans Unicode, Arial, Helvetica, Verdana, sans-serif;
+	height: 100%;
+	margin: 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+*:focus {
+    outline: none;
+}
+
+img {
+	border: 0px;
+}
+
+*.unselectable {
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   -o-user-select: none;
+   user-select: none;
+}
+
+.scrollbarHandleTop {
+    background: url(../img/main.png) -191px -159px;
+    height: 6px;
+    width: 15px;
+}
+
+.scrollbarHandleMiddle {
+    background: url(../img/workshop_scroller.png);
+    width: 15px;
+}
+
+.scrollbarHandleBottom {
+    background: url(../img/main.png) -191px -166px;
+    height: 6px;
+    width: 15px;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+
+#mHeader {
+    background: url(../img/main.png) 0px 0px;
+    height: 61px;
+    width: 100%;
+}
+
+#mHeader .logo {
+	background: url(../img/main.png) 0px -132px;
+	cursor: pointer;
+	float: left;
+	height: 61px;
+	position: relative;
+	margin-left: 14px;
+	width: 190px;
+}
+
+#mHeader .logo span {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+#mHeader .flags {
+    float: right;
+    margin-right: 10px;
+    margin-top: 4px;
+    width: 22px;
+}
+
+#mHeader .flag {
+    cursor: pointer;
+    height: 17px;
+    position: relative;
+    width: 22px;
+}
+
+#mHeader .flag span {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+#mHeader .en {
+    background: url(../img/main.png) -225px -166px;
+}
+
+#mHeader .fr {
+    background: url(../img/main.png) -248px -166px;
+    margin-top: 2px;
+}
+
+#mHeader .ru {
+    background: url(../img/main.png) -271px -166px;
+    margin-top: 2px;
+}
+
+#mHeader .button {
+    cursor: pointer;
+    float: right;
+    height: 33px;
+    margin-right: 10px;
+    margin-top: 14px;
+}
+
+#mHeader .button .left {
+    float: left;
+    height: 33px;
+}
+
+#mHeader .button .middle {
+    background: url(../img/main.png) -390px -132px;
+    color: #ffffff;
+    float: left;
+    font-size: 11px;
+    height: 33px;
+    line-height: 32px;
+    text-shadow: #151515 0px -1px;
+}
+
+#mHeader .button .right {
+    background: url(../img/main.png) -578px -132px;
+    float: left;
+    height: 33px;
+    width: 12px;
+}
+
+#btnDiscover .left {
+    background: url(../img/main.png) -266px -132px;
+    width: 41px;
+}
+
+#btnLogout .left,
+#btnLogin .left {
+    background: url(../img/main.png) -350px -132px;
+    width: 39px;
+}
+
+#btnUsername .left {
+    background: url(../img/main.png) -225px -132px;
+    width: 40px;
+}
+
+#btnSignup .left {
+    background: url(../img/main.png) -308px -132px;
+    width: 41px;
+}
+
+#btnWorkshop .left {
+    background: url(../img/main.png) -591px -132px;
+    width: 40px;
+}
+
+#mHeader a {
+    display:  block;
+    text-decoration: none;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+
+#mFooter {
+    background: url(../img/main.png) 0px -89px;
+    bottom: 0px;
+    height: 42px;
+    position: fixed;
+    text-shadow: #111111 0px -1px 1px;
+    width: 100%;
+    z-index: 10;
+}
+
+#mFooter .copyright {
+    color: #b3b3b3;
+    font-size: 11px;
+    height: 34px;
+    left: 10px;
+    line-height: 28px;
+    position: absolute;
+    top: 8px;
+}
+
+#mFooter .twitter {
+    color: #b3b3b3;
+    font-size: 11px;
+    height: 34px;
+    line-height: 28px;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+}
+
+#mFooter .twitter .icon {
+    background: url(../img/main.png) -191px -132px;
+    display: inline-block;
+    float: left;
+    height: 26px;
+    margin-right: 5px;
+    width: 33px;
+}
+
+#mFooter .twitter a,
+#mFooter .twitter a:hover,
+#mFooter .twitter a:visited {
+    color: #b3b3b3;
+    text-decoration: none;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/* Alerte                                                                                      */
+/*---------------------------------------------------------------------------------------------*/
+
+#windowBackground {
+    background: url(../img/workshop_background.png);
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    z-index: 10000;
+}
+
+#alert {
+    display: none;
+    height: 177px;
+    position: absolute;
+    top: 70px;
+    width: 516px;
+    z-index: 10000;
+}
+
+#alert .header {
+    background: url(../img/main.png) 0px -194px;
+    color: #ffffff;
+    font-size: 12px;
+    height: 35px;
+    line-height: 35px;
+    padding: 1px 8px 0px 8px;
+    position: relative;
+    text-align: center;
+    text-shadow: #000000 0px -1px 0px;
+    width: 500px;
+}
+
+#alert .close,
+#login .close,
+#signup .close {
+    background: url(../img/main.png) -517px -266px;
+    cursor: pointer;
+    height: 12px;
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    width: 12px;
+    
+}
+
+#alert .content {
+    background: url(../img/main.png) 0px -231px;
+    color: #ffffff;
+    font-size: 11px;
+    height: 60px;
+    line-height: 20px;
+    padding: 15px 28px 15px 28px;
+    position: relative;
+    text-shadow: #000000 0px -1px 1px;
+    width: 460px;
+}
+
+#alert .footer {
+    background: url(../img/main.png) 0px -322px;
+    height: 40px;
+    padding: 0px 8px 10px 8px;
+    width: 500px;
+}
+
+#alertButton1 {
+    cursor: pointer;
+    float: left;
+    height: 23px;
+    margin: 9px 0px 0px 9px; 
+}
+
+#alertButton2,
+#loginButton1,
+#signupButton1 {
+    cursor: pointer;
+    float: right;
+    height: 23px;
+    margin: 9px 13px 0px 0px; 
+}
+
+#alertButton3,
+#loginButton2,
+#signupButton2 {
+    cursor: pointer;
+    float: right;
+    height: 23px;
+    margin: 9px 9px 0px 0px; 
+}
+
+#alert .btnLeft,
+#login .btnLeft,
+#signup .btnLeft {
+    float: left;
+    height: 23px;
+    width: 16px;
+}
+
+#alert .btnMiddle,
+#login .btnMiddle,
+#signup .btnMiddle {
+    color: #ffffff;
+    float: left;
+    font-size: 11px;
+    height: 23px;
+    line-height: 22px;
+}
+
+#alert .btnRight,
+#login .btnRight,
+#signup .btnRight {
+    float: left;
+    height: 23px;
+    width: 16px;
+}
+
+#alert .btnInactive .btnLeft,
+#login .btnInactive .btnLeft,
+#signup .btnInactive .btnLeft {
+    background: url(../img/main.png) -517px -194px;
+}
+
+#alert .btnInactive .btnMiddle,
+#login .btnInactive .btnMiddle,
+#signup .btnInactive .btnMiddle {
+    background: url(../img/main.png) -533px -194px;
+    text-shadow: #000000 0px -1px 0px;
+}
+
+#alert .btnInactive .btnRight,
+#login .btnInactive .btnRight,
+#signup .btnInactive .btnRight {
+    background: url(../img/main.png) -751px -194px;
+}
+
+#alert .btnActive .btnLeft,
+#login .btnActive .btnLeft,
+#signup .btnActive .btnLeft {
+    background: url(../img/main.png) -517px -218px;
+}
+
+#alert .btnActive .btnMiddle,
+#login .btnActive .btnMiddle,
+#signup .btnActive .btnMiddle {
+    background: url(../img/main.png) -533px -218px;
+    text-shadow: #18215A 0px -1px 1px;
+}
+
+#alert .btnActive .btnRight,
+#login .btnActive .btnRight,
+#signup .btnActive .btnRight {
+    background: url(../img/main.png) -751px -218px;
+}
+
+#alert .btnDisabled,
+#login .btnDisabled,
+#signup .btnDisabled {
+    cursor: default;
+}
+
+#alert .btnDisabled .btnLeft,
+#login .btnDisabled .btnLeft,
+#signup .btnDisabled .btnLeft {
+    background: url(../img/main.png) -517px -242px;
+}
+
+#alert .btnDisabled .btnMiddle,
+#login .btnDisabled .btnMiddle,
+#signup .btnDisabled .btnMiddle {
+    background: url(../img/main.png) -533px -242px;
+    color: #434855;
+    text-shadow: #192031 0px -1px 1px;
+}
+
+#alert .btnDisabled .btnRight,
+#login .btnDisabled .btnRight,
+#signup .btnDisabled .btnRight {
+    background: url(../img/main.png) -751px -242px;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/* Connexion et Enregistrement                                                                 */
+/*---------------------------------------------------------------------------------------------*/
+
+#login {
+    display: none;
+    height: 204px;
+    position: absolute;
+    top: 120px;
+    width: 311px;
+    z-index: 11000;
+}
+
+#signup {
+    display: none;
+    height: 176px;
+    position: absolute;
+    top: 120px;
+    width: 311px;
+    z-index: 11000;
+}
+
+#login .header,
+#signup .header {
+    background: url(../img/workshop.png) -717px -759px;
+    color: #ffffff;
+    font-size: 12px;
+    height: 35px;
+    line-height: 35px;
+    padding: 1px 8px 0px 8px;
+    position: relative;
+    text-align: center;
+    text-shadow: #000000 0px -1px 0px;
+    width: 295px;
+}
+
+#login .content {
+    background: url(../img/workshop.png) -717px -796px;
+    height:114px;
+    padding: 1px 8px 1px 8px;
+    width: 295px;
+}
+
+#login .content .field,
+#signup .content .field {
+    border: 0px;
+    color: #ffffff;
+    font: 11px "Lucida Grande", Lucida Sans Unicode, Arial, Helvetica, Verdana, sans-serif;
+    height: 19px;
+    padding: 0px 5px 0px 33px;
+    width: 217px;
+}
+
+#loginUsername,
+#signupUsername {
+    background: url(../img/workshop.png) -717px -964px;
+    margin: 20px 20px 0px 20px;
+}
+
+#login .loginUsernameError,
+#signup .signupUsernameError {
+    background: url(../img/workshop.png) -717px -1004px;
+    color: #ffffff;
+}
+
+#loginPassword,
+#signupPassword {
+    background: url(../img/workshop.png) -717px -984px;
+    margin: 10px 20px 0px 20px;
+}
+
+#login .loginPasswordError,
+#signup .signupPasswordError {
+    background: url(../img/workshop.png) -717px -1024px;
+}
+
+#login .checkbox {
+    cursor: pointer;
+    float: right;
+    height: 13px;
+    margin: 15px 9px 0px 0px;
+    width: 13px;
+}
+
+#login .checkboxActive {
+    background: url(../img/workshop.png) -973px -964px;
+}
+
+#login .checkboxInactive {
+    background: url(../img/workshop.png) -987px -964px;
+}
+
+#login .checkboxLabel {
+    color: #ffffff;
+    float: right;
+    font-size: 11px;
+    height: 20px;
+    line-height: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    text-shadow: #000000 0px -1px;
+}
+
+#login .footer,
+#signup .footer {
+    background: url(../img/workshop.png) -717px -913px;
+    height: 40px;
+    padding: 0px 8px 10px 8px;
+    width: 295px;
+}
+
+#signup {
+    display: none;
+    height: 176px;
+    position: absolute;
+    top: 120px;
+    width: 311px;
+    z-index: 11000;
+}
+
+#signup .content {
+    background: url(../img/workshop.png) -717px -796px;
+    height: 88px;
+    padding: 1px 8px 0px 8px;
+    width: 295px;
+}
+
+#signup .border {
+    background: url(../img/workshop.png) -717px -911px;
+    height: 1px;
+    padding: 0px 8px;
+    width: 295px;
+}

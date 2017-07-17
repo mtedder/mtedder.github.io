@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Asteroid Wireframe1</title>
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Language" content="en" />
+        <meta name="description" content="Design your LEGO© models in 3D and share them with other fans." />
+        <meta name="robots" content="index, follow" />
+
+        <!--link rel="stylesheet" type="text/css" media="screen" href="css/main.css" /-->
+        <!--link rel="stylesheet" type="text/css" media="screen" href="css/workshop.css" /-->
+       	<link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/workshop.css" />
+
+</head>
+
+<body>
+
+  <script src="js/three.min.js"></script>
+  <script src="js/asteroids.js"></script>
+
+		<div id="header">
+            <div id="logo" style="background: url(data/img/mission_asteroid_cover.png); width: 210px; height: 52px;"></div>
+            <div class="flags">
+                <div class="flag en"><a href="http://www.mecabricks.com/en/workshop/"><span></span></a></div>
+                <div class="flag fr"><a href="http://www.mecabricks.com/fr/workshop/"><span></span></a></div>
+                <div class="flag ru"><a href="http://www.mecabricks.com/ru/workshop/"><span></span></a></div>
+            </div>
+
+            <div id="btnDiscover" class="button" onclick="launchprobe()">
+                <div class="left"></div>
+                <div class="middle">Lauch Probe</div>
+                <div class="right"></div>
+            </div>
+        </div>
+
+		<div id="menuBar">
+            <div id="menu-1" class="item" style="margin-left:10px">
+                <div class="itemWrapper" onclick="clickMenuLabel(event, 1)" onmouseover="mouseoverMenuLabel(event, 1)">File</div>
+                <div class="menuTooltip">
+                    <div class="top"></div>
+                    <div class="content">
+                        <div class="tooltipItem" onclick="openAlertForNewModel()">New</div>
+                        <div class="tooltipItem" onclick="openAlertForOpenModel()">Open</div>
+                        <div class="tooltipItem" onclick="openOpenModelWindow( true )">Import</div>
+                        <div class="tooltipItem" onclick="save( false )">Save</div>
+                        <div class="tooltipItem" onclick="save( true )">Save As</div>
+                        <div class="tooltipItem" onclick="openProperties()">Properties</div>
+                    </div>
+                    <div class="bottom"></div>
+                </div>
+            </div>
+            <div id="menu-2" class="item">
+                <div class="itemWrapper" onclick="clickMenuLabel(event, 2)" onmouseover="mouseoverMenuLabel(event, 2)">Help</div>
+                <div class="menuTooltip">
+                    <div class="top"></div>
+                    <div class="content">
+                        <div class="tooltipItem" onclick="openHelpWindow()">Workshop Help</div>
+                        <div class="tooltipItem" onclick="openContactWindow()">Contact Us</div>
+                    </div>
+                    <div class="bottom"></div>
+                </div>
+            </div>
+            <div id="menu-3" class="item">
+                <div class="itemWrapper" onclick="clickMenuLabel(event, 3)" onmouseover="mouseoverMenuLabel(event, 3)">
+                    <div class="normalView"></div>
+                </div>
+                <div class="menuTooltip">
+                    <div class="top"></div>
+                    <div class="content">
+                        <div class="tooltipItem" onclick="setOrientation('left')">Left</div>
+                        <div class="tooltipItem" onclick="setOrientation('right')">Right</div>
+                        <div class="tooltipItem" onclick="setOrientation('back')">Back</div>
+                        <div class="tooltipItem" onclick="setOrientation('front')">Front</div>
+                        <div class="tooltipItem" onclick="setOrientation('bottom')">Bottom</div>
+                        <div class="tooltipItem" onclick="setOrientation('top')">Top</div>
+                    </div>
+                    <div class="bottom"></div>
+                </div>
+            </div>
+            <div id="menu-4" class="item">
+                <div class="itemWrapper" onclick="clickMenuLabel(event, 4)" onmouseover="mouseoverMenuLabel(event, 4)">
+                    <div class="render"></div>
+                </div>
+                <div class="menuTooltip">
+                    <div class="top"></div>
+                    <div class="content">
+                        <div class="tooltipItem" onclick="setRender('texture')">
+                            <div id="menuTextureTick" class="tick"></div>
+                            Texture                        </div>
+                        <div class="tooltipItem" onclick="setRender('wireframe')">
+                            <div id="menuWireframeTick" class="tick" style="display:none"></div>
+                            Wireframe                        </div>
+                    </div>
+                    <div class="bottom"></div>
+                </div>
+            </div>
+            <div id="menu-5" class="item">
+                <div class="itemWrapper" onclick="clickMenuLabel(event, 5)" onmouseover="mouseoverMenuLabel(event, 5)">
+                    <div class="display"></div>
+                </div>
+                <div class="menuTooltip">
+                    <div class="top"></div>
+                    <div class="content">
+                        <div class="tooltipItem" onclick="worldAxisVisibility()">
+                            <div id="menuAxisTick" class="tick"></div>
+                            Axis                        </div>
+                        <div class="tooltipItem" onclick="gridFloorVisibility()">
+                            <div id="menuGridFloorTick" class="tick"></div>
+                            Grid Floor                        </div>
+                    </div>
+                    <div class="bottom"></div>
+                </div>
+            </div>
+            <br style="clear:both">
+        </div>
+
+       <div id="main">
+            <div id="library">
+                <div class="title">
+                    Mission Options    <div class="close" onclick="closeLibrary()"></div>
+                </div>
+                <div class="categoryContainer">
+                    <div id="partCategory"></div>
+                    <select id="partCategories" onchange="getParts()">
+
+<option value="1">Animals</option><option value="2">Bars</option><option value="3" selected>Bricks</option><option value="4">Bricks - Arches</option><option value="5">Bricks - Brackets</option><option value="6">Bricks - Sloping</option><option value="7">Bricks - Special</option><option value="8">Chains & Strings</option><option value="32">Doors & Windows</option><option value="10">Flags</option><option value="24">Food</option><option value="12">Interior</option><option value="11">Ladders & Fences</option><option value="13">Minerals</option><option value="14">Minifigures</option><option value="15">Minifigures - Accessories</option><option value="18">Minifigures - Hairs</option><option value="17">Minifigures - Head Clothing</option><option value="21">Minifigures - Heads</option><option value="19">Minifigures - Legs</option><option value="20">Minifigures - Tools</option><option value="22">Minifigures - Torsos</option><option value="16">Minifigures - Weapons</option><option value="9">Miscellaneous</option><option value="26">Plants</option><option value="27">Plates</option><option value="28">Plates - Baseplates</option><option value="29">Plates - Brackets</option><option value="30">Plates - Flat Tiles</option><option value="31">Plates - Special</option><option value="34">Road Signs</option><option value="41">Support</option><option value="35">Technic</option><option value="36">Transportation</option><option value="38">Transportation - Boats</option><option value="39">Transportation - Cars</option><option value="37">Transportation - Planes</option><option value="40">Transportation - Trains</option><option value="23">Wall Elements</option><option value="33">Wheels</option><option value="25">Windscreens</option>
+                    </select>
+                </div>
+                <div id="partWrapper">
+                    <div id="parts">
+                        <div id="parts_content" class="" style="height: 478px; ">
+                        <div id="part-3005" class="part" style="background: url(data/icons/satellite-icon-1.png)"></div>
+                        <div id="part-3004" class="part" style="background: url(data/icons/satellite-icon-2.png)"></div>
+                        <div id="part-30136" class="part" style="background:url(data/icons/satellite-icon-3.png)"></div>
+                        <div id="part-2877" class="part" style="background: url(data/icons/satellite-icon-4.png)"></div>
+                        <div id="part-3008" class="part" style="background: url(data/icons/satellite-icon-5.png)"></div>
+                        <div id="part-3622" class="part" style="background: url(data/icons/asteroid-icon-1.png)"></div>
+                        <div id="part-3010" class="part" style="background: url(data/icons/asteroid-icon-2.png)"></div>
+                        <div id="part-30137" class="part" style="background:url(data/icons/asteroid-icon-3.png)"></div>
+                        <div id="part-3009" class="part" style="background: url(data/icons/asteroid-icon-4.png)"></div>
+
+                    </div>
+                        <div id="parts_track">
+                            <div id="parts_handle">
+                                <div class="scrollbarHandleTop"></div>
+                                <div class="scrollbarHandleMiddle"></div>
+                                <div class="scrollbarHandleBottom"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottomSpacer"></div>
+            </div>
+           	<div id="sceneContainer">
+			 <div id="scene">
+				<canvas id="3dworld" width="465" height="500" style="border:1px solid #c3c3c3;">
+					Your browser does not support the HTML5 canvas tag.
+				</canvas>
+
+                          <!-- canvas id="mini3dworld" width="465" height="500" style="border:1px solid #c3c3c3;">
+				Your browser does not support the HTML5 canvas tag.
+			    </canvas -->
+			 </div>
+			 <div class="top"></div>
+            </div>
+            <div id="tools">
+                <div class="title">
+                    Orbital Status Window                    <div class="close" onclick="closeTools()"></div>
+                </div>
+                <div id="hierarchy">
+                    <div id="hierarchy_container">
+                        <div id="hierarchy_exit">
+                            <div id="hierarchy_content" style="background: url(data/img/asteroid_capture_sm.png)"></div>
+                            <canvas id="mini3dworld" width="230" height="160" style="border:1px solid #c3c3c3;">
+				Your browser does not support the HTML5 canvas tag.
+			    </canvas>
+                        </div>
+                        <div id="hierarchy_track">
+                            <div id="hierarchy_handle">
+                                <div class="scrollbarHandleTop"></div>
+                                <div class="scrollbarHandleMiddle"></div>
+                                <div class="scrollbarHandleBottom"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="button buttonDel" onclick="displayDeleteTooltip()"></div>
+                        <div class="button buttonDup" onclick="duplicateObject()"></div>
+                        <div class="button buttonAdd" onclick="addAssembly()"></div>
+                    </div>
+                </div>
+                <div class="darkSep"></div>
+                <div class="title">
+                    Mission Control                </div>
+                <div id="inspector">
+                    <div>
+                        <div class="label">Colour :</div>
+                        <div class="colourWrapper" onclick="colourPicker.open()">
+                            <div id="colour"></div>
+                            <div class="colourFrame"></div>
+                        </div>
+                        <br style="clear:both" />
+                    </div>
+                    <div style="margin-top:10px">
+                        <div class="label">Grid :</div>
+                        <div class="gridWrapper">
+                            <div id="gridType">
+                                <div class="icon"></div>
+                                <div class="text"></div>
+                            </div>
+                            <select id="gridTypes" onchange="changeGridSize()">
+                                <option value="small" selected>Small</option>
+                                <option value="medium">Medium</option>
+                                <option value="large">Large</option>
+                            </select>
+                        </div>
+                        <br style="clear:both" />
+                    </div>
+                    <div style="margin-top:10px">
+                        <div class="label">x :</div>
+                        <div id="track-position-x" class="sliderTrack">
+                            <div id="handle-position-x" class="sliderHandle"></div>
+                        </div>
+                        <input type="text" id="value-position-x" class="value" onfocus="selectTransformationField( this, 'position', 'x' )" onBlur="saveTransformationValue( this, 'position', 'x' )" />
+                        <br style="clear:both" />
+                    </div>
+                    <div style="margin-top:10px">
+                        <div class="label">y :</div>
+                        <div id="track-position-y" class="sliderTrack">
+                            <div id="handle-position-y" class="sliderHandle"></div>
+                        </div>
+                        <input type="text" id="value-position-y" class="value" onfocus="selectTransformationField( this, 'position', 'y' )" onBlur="saveTransformationValue( this, 'position', 'y' )" />
+                        <br style="clear:both" />
+                    </div>
+                    <div style="margin-top:10px">
+                        <div class="label">z :</div>
+                        <div id="track-position-z" class="sliderTrack">
+                            <div id="handle-position-z" class="sliderHandle"></div>
+                        </div>
+                        <input type="text" id="value-position-z" class="value"  onfocus="selectTransformationField( this, 'position', 'z' )"onBlur="saveTransformationValue( this, 'position', 'z' )" />
+                        <br style="clear:both" />
+                    </div>
+                    <div style="margin-top:10px">
+                        <div class="label">Simulation<br/>Speed :</div>
+                        <div id="track-rotation-x" class="sliderTrack">
+                            <div id="handle-rotation-x" class="sliderHandle"></div>
+                        </div>
+                        <input type="text" id="value-rotation-x" class="value" onfocus="selectTransformationField( this, 'rotation', 'x' )" onBlur="saveTransformationValue( this, 'rotation', 'x' )" />
+                        <br style="clear:both" />
+                    </div>
+                </div>
+            </div>
+            <br style="clear:both" />
+        </div>
+</body>
+
+</html>
