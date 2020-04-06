@@ -30,6 +30,10 @@
 
 <script>
 
+AFRAME.registerComponent('clickhandler', {
+
+init: function() {
+
 const aObject = document.querySelector("#model");
 
 // every click, we make our model grow in size :)
@@ -46,6 +50,8 @@ aObject.addEventListener('click', function(ev, target){
     //     });
     //   }
     // });
+
+}});
 </script>
 
 </head>
