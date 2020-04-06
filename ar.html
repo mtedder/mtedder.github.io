@@ -28,31 +28,7 @@
   }
 </style>
 
-<script>
 
-AFRAME.registerComponent('clickhandler', {
-
-init: function() {
-
-const aObject = document.querySelector("#model");
-
-// every click, we make our model grow in size :)
-aObject.addEventListener('click', function(ev, target){
-            alert("Clicked!");
-        });
-
-    // here we register che 'clickhandler' component
-    // AFRAME.registerComponent("clickhandler", {
-    //   init: function() {
-    //     // we add the click event listener to any instance of this component
-    //     this.el.addEventListener("click", () => {
-    //       alert("Clicked!");
-    //     });
-    //   }
-    // });
-
-}});
-</script>
 
 </head>
 
@@ -88,6 +64,33 @@ aObject.addEventListener('click', function(ev, target){
     </a-nft>
     <a-entity camera></a-entity>
   </a-scene>
+
+  <script>
+
+        AFRAME.registerComponent('clickhandler', {
+    
+        init: function() {
+    
+        const aObject = document.querySelector("#model");
+    
+        // every click, we make our model grow in size :)
+        aObject.addEventListener('click', function(ev, target){
+                    alert("Clicked!");
+                });
+    
+            // here we register che 'clickhandler' component
+            // AFRAME.registerComponent("clickhandler", {
+            //   init: function() {
+            //     // we add the click event listener to any instance of this component
+            //     this.el.addEventListener("click", () => {
+            //       alert("Clicked!");
+            //     });
+            //   }
+            // });
+    
+        }});
+    </script>
+    
 </body>
 
 </html>
