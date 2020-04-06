@@ -34,30 +34,20 @@
 
 <script>
 
-        AFRAME.registerComponent('clickhandler', {
+// here we register che 'clickhandler' component
+        // AFRAME.registerComponent('clickhandler', {
     
-        init: function() {
+        // init: function() {
     
-        const aObject = document.querySelector("#model");
+        // const aObject = document.querySelector("#model");
     
-        // every click, we make our model grow in size :)
-        aObject.addEventListener('click', function(ev, target){
-                    alert("Clicked!");
-                });
-    
-            // here we register che 'clickhandler' component
-            // AFRAME.registerComponent("clickhandler", {
-            //   init: function() {
-            //     // we add the click event listener to any instance of this component
-            //     this.el.addEventListener("click", () => {
-            //       alert("Clicked!");
-            //     });
-            //   }
-            // });
-    
-        }});
+        // // handle click event
+        // aObject.addEventListener('click', function(ev, target){
+        //             alert("Clicked!");
+        //         });
+        // }});
     </script>
-    
+
 <body style="margin : 0px; overflow: hidden;">
   <!-- minimal loader shown until image descriptors are loaded -->
   <div class="arjs-loader">
