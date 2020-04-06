@@ -33,6 +33,12 @@
     embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
   >
+
+  <a-assets>
+	<a-asset-item id="stardust-full" src="./stardust.gltf"></a-asset-item>
+	<a-asset-item id="stardust-cut" src="./stardustcutaway.gltf"></a-asset-item>
+  </a-assets>
+
     <!-- we use cors proxy to avoid cross-origin problems -->
     <a-nft
       type="nft"      
@@ -43,7 +49,7 @@
       smoothThreshold="5"
     >
       <a-entity
-      gltf-model="./stardustcutaway.gltf"
+      gltf-model="#stardust-full"
       scale="1000 1000 1000"
       position="25 75 0"
       >
